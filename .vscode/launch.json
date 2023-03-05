@@ -1,16 +1,36 @@
 {
   "version": "0.2.0",
   "configurations": [
+    
+    {
+      "address": "127.0.0.1",
+      "localRoot": "${workspaceFolder}/cdk.out/asset.6e002065a6fd8baa3da925b0de118667ab8ddbfaa1641958f917bdd855ce3a57",
+      "name": "Attach to sam-local-api",
+      "port": 5858,
+      "remoteRoot": "/var/task",
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
     {
       "name": "Debug CRA Tests",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
-      "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
+      "args": [
+        "test",
+        "--runInBand",
+        "--no-cache",
+        "--watchAll=false"
+      ],
       "cwd": "${workspaceRoot}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "env": { "CI": "true" }
+      "env": {
+        "CI": "true"
+      }
     }
   ]
 }

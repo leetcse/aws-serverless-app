@@ -33,7 +33,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "start:local:server": "cdk synth --no-staging && sam local start-api -t  .\\cdk.out\\CdkServerlessStack.template.json  --debug",
+    "start:local:server": "cdk synth --no-staging && sam build -t .\\cdk.out\\CdkServerlessStack.template.json && sam local start-api --debug",
+    "start:local:debugger": "cdk synth --no-staging && sam build -t .\\cdk.out\\CdkServerlessStack.template.json && sam local start-api -d 5858 --debug",
     "cdk": "cdk"
   },
   "eslintConfig": {

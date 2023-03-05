@@ -10,6 +10,7 @@ export class ApiService extends Construct {
        const userServiceFunction = new NodejsFunction(this, 'ApiHandler', {
         entry: './cdk/lib/api-service.function.ts',
         functionName: 'handler',
+        bundling: { minify: true, sourceMap: true },
         timeout: Duration.seconds(10),
         runtime: Runtime.NODEJS_18_X});
       
