@@ -34,3 +34,14 @@ bucket_2
 # open a browser window and login to the AWS Console
 $ aws-vault login jonsmith
 ```
+
+### Locally testing AWS Serverless lambda/step function
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html
+https://aws.amazon.com/visualstudiocode/
+ 
+ ```bash
+aws --version
+aws-cli/2.8.7 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
+sam --version
+SAM CLI, version 1.76.0
+ ```

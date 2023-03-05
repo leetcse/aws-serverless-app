@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import {aws_s3, CfnOutput} from 'aws-cdk-lib';
+import { ApiService } from './api-service';
 
 export class CdkServerlessStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -11,5 +12,7 @@ export class CdkServerlessStack extends cdk.Stack {
     new CfnOutput(this, 'serverless-app-bucket-name', {
       value: bucket.bucketName
     });
+
+    new ApiService(this, 'api-service');
   }
 }
