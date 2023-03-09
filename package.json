@@ -34,8 +34,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "start:local:server": "cdk synth --no-staging && sam build -t .\\cdk.out\\CdkServerlessStack.template.json && sam local start-api --debug",
-    "start:local:debugger": "cdk synth --no-staging && sam build -t .\\cdk.out\\CdkServerlessStack.template.json && sam local start-api -d 5858 --debug",
+    "sam:build": "cdk synth --no-staging && sam build -t .\\cdk.out\\CdkServerlessStack.template.json",
+    "sam:local:startapi": "sam local start-api --debug",
+    "sam:local:startapi-debugger": "sam local start-api -d 5858 --debug",
+    "localstack:deploy": "cdklocal bootstrap && cdklocal deploy --require-approval never",
     "cdk": "cdk"
   },
   "eslintConfig": {

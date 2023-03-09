@@ -12,7 +12,7 @@ export class ApiService extends Construct {
         functionName: 'handler',
         bundling: { minify: true, sourceMap: true },
         timeout: Duration.seconds(10),
-        runtime: Runtime.NODEJS_18_X});
+        runtime: Runtime.NODEJS_16_X});
       
         const api = new LambdaRestApi(this, 'api', {
           handler: userServiceFunction,
